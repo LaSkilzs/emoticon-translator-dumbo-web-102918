@@ -4,7 +4,7 @@ require "pry"
 def load_library(file)
   text = YAML.load_file(file)
   
-  hash = {"get_emoticon"=>{ {}}, "get_meaning"=>{ {}}}
+  hash = {"get_emoticon"=>{ {}}, "get_meaning"=>{ {}}
   
   text.each do |meaning, array|
     hash["get_emoticon"][array[0]] = array[1]
